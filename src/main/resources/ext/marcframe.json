@@ -6175,13 +6175,13 @@
       "match": [
         {"when": "i2=0", "addLink": "continues"},
         {"when": "i2=1", "addLink": "continuesInPart"},
-        {"when": "i2=2", "addLink": "precededBy"},
-        {"when": "i2=3", "addLink": "precededBy"},
+        {"when": "i2=2", "addLink": "precededBy", "TODO": "need of narrower term to ensure proper match on revert"},
+        {"when": "i2=3", "addLink": "precededBy", "TODO": "need of narrower term to ensure proper match on revert"},
         {"when": "i2=4", "addLink": "mergerOf"},
-        {"when": "i2=5", "addLink": "absorbed"},
-        {"when": "i2=6", "addLink": "absorbed"},
+        {"when": "i2=5", "addLink": "absorbed", "TODO": "need of narrower term to ensure proper match on revert"},
+        {"when": "i2=6", "addLink": "absorbed", "TODO": "need of narrower term to ensure proper match on revert"},
         {"when": "i2=7", "addLink": "separatedFrom"},
-        {"when": "i2=null", "addLink": "precededBy"}
+        {"when": "i2=null", "addLink": "precededBy", "TODO": "need of narrower term to ensure proper match on revert"}
         ],
       "resourceType": "Work",
     },
@@ -6189,16 +6189,16 @@
       "inherit": "772",
       "aboutEntity": "?work",
       "match": [
-        {"when": "i2=0", "addLink": "continuedBy"},
+        {"when": "i2=0", "addLink": "continuedBy", "TODO": "need of narrower term to ensure proper match on revert"},
         {"when": "i2=1", "addLink": "continuedInPartBy"},
-        {"when": "i2=2", "addLink": "succeededBy"},
-        {"when": "i2=3", "addLink": "succeededBy"},
-        {"when": "i2=4", "addLink": "absorbedBy"},
-        {"when": "i2=5", "addLink": "absorbedBy"},
+        {"when": "i2=2", "addLink": "succeededBy", "TODO": "need of narrower term to ensure proper match on revert"},
+        {"when": "i2=3", "addLink": "succeededBy", "TODO": "need of narrower term to ensure proper match on revert"},
+        {"when": "i2=4", "addLink": "absorbedBy", "TODO": "need of narrower term to ensure proper match on revert"},
+        {"when": "i2=5", "addLink": "absorbedBy", "TODO": "need of narrower term to ensure proper match on revert"},
         {"when": "i2=6", "addLink": "splitInto"},
         {"when": "i2=7", "addLink": "mergedToForm"},
-        {"when": "i2=8", "addLink": "continuedBy"},
-        {"when": "i2=null", "addLink": "succeededBy"}
+        {"when": "i2=8", "addLink": "continuedBy", "TODO": "need of narrower term to ensure proper match on revert"},
+        {"when": "i2=null", "addLink": "succeededBy", "TODO": "need of narrower term to ensure proper match on revert"}
         ],
       "resourceType": "Work",
     },
