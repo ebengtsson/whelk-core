@@ -6076,8 +6076,8 @@
     "754": {},
     "755": {},
 
-    "760": {"NOTE:domainIncludes": "Serial", "inherit": "772", "addLink": "hasSeries", "resourceType": "Instance"},
-    "762": {"NOTE:domainIncludes": "Serial", "inherit": "772", "addLink": "hasSubseries", "resourceType": "Instance"},
+    "760": {"NOTE:domainIncludes": "Serial", "inherit": "772", "addLink": "hasSeries", "resourceType": "Work"},
+    "762": {"NOTE:domainIncludes": "Serial", "inherit": "772", "addLink": "hasSubseries", "resourceType": "Work"},
     "765": {"inherit": "772", "addLink": "translationOf"},
     "767": {"inherit": "772", "addLink": "translation"},
     "770": {"inherit": "772", "addLink": "supplement"},
@@ -6086,23 +6086,21 @@
       "resourceType": "Work",
       "TOOO:i1": {},
       "TOOO:i2": {},
-      "$a": {"property": "controlledLabel", "TODO:targetMatch": "1xx"},
-      "$b": {"property": "edition", "TODO:targetMatch": "250"},
+      "$a": {"property": "primaryContribution", "TODO:targetMatch": "1xx"},
+      "$b": {"property": "editionStatement", "TODO:targetMatch": "250"},
       "$c": {"property": "qualifyingNote"},
-      "$d": {"property": "placePublisherAndDateOfPublication", "TODO:targetMatch": "260$c"},
+      "$d": {"property": "provisionActivityStatement", "TODO:targetMatch": "260$c"},
       "$g": {"addProperty": "part"},
-      "$h": {"property": "physicalDescription"},
-      "$i": {"addProperty": "linkNote"},
-      "$k": {"addProperty": "seriesLabel", "TODO:targetMatch": "4xx, 8xx"},
-      "$m": {"property": "mediaNote"},
+      "$h": {"property": "extent"},
+      "$i": {"addProperty": "linkNote", "TODO:bflc:relationship"}, 
+      "$k": {"addProperty": "seriesStatement", "TODO:targetMatch": "4xx, 8xx"},
+      "$m": {"property": "note"},
       "$n": {"addProperty": "note"},
-      "$o": {
-        "addProperty": "identifier"
-      },
+      "$o": {"addProperty": "identifier", "TODO:ignored": "true???"},
       "$r": {"addProperty": "reportNumber", "TODO:targetMatch": "088"},
       "$s": {"property": "uniformTitle", "TODO:targetMatch": "240"},
       "$t": {"property": "title", "TODO:targetMatch": "222, 245"},
-      "$u": {"property": "standardTechnicalReportNumber", "TODO:targetMatch": "027"},
+      "$u": {"property": "strn", "TODO:targetMatch": "027"},
       "$w": {
         "addLink": "describedBy", "resourceType": "Record", "property": "controlNumber",
         "uriTemplate": "http://libris.kb.se/bib/{_}"
@@ -6145,6 +6143,7 @@
       "$q": {"property": "pagination"}
     },
     "774": {
+      "NOTE": "record-count:80",
       "inherit": "772",
       "addLink": "hasPart",
       "NOTE:domainIncludes": "Serial",
@@ -6152,7 +6151,6 @@
     },
     "775": {
       "inherit": "772",
-      "TODO:note": "uncommon",
       "addLink": "otherEdition",
       "$e": {"link": "language", "resourceType": "Language", "property": "label", "TODO:inherit": "008:[35:38]"},
       "$f": {"property": "publicationCountry", "TODO:inherit": "008:[15:18]"}
@@ -6163,6 +6161,8 @@
       "resourceType": "Instance"
     },
     "777": {
+      "NOTE": "record-count:200",
+
       "inherit": "772",
       "addLink": "issuedWith"
     },
@@ -6170,15 +6170,37 @@
       "inherit": "772",
       "TOOO:i1": {},
       "TOOO:i2": {},
-      "addLink": "precededBy",
-      "resourceType": "Work"
+      "match": [
+        {"when": "i2=0", "addLink": "continues"},
+        {"when": "i2=1", "addLink": "continuesInPart"},
+        {"when": "i2=2", "addLink": "precededBy"},
+        {"when": "i2=3", "addLink": "precededBy"},
+        {"when": "i2=4", "addLink": "mergerOf"},
+        {"when": "i2=5", "addLink": "absorbed"},
+        {"when": "i2=6", "addLink": "absorbed"},
+        {"when": "i2=7", "addLink": "separatedFrom"},
+        {"when": "i2=null", "addLink": "precededBy"}
+        ],
+      "resourceType": "Work",
     },
     "785": {
-      "inherit": "780",
-      "addLink": "succeededBy",
-      "resourceType": "Work"
+      "inherit": "772",
+       "match": [
+        {"when": "i2=0", "addLink": "continuedBy"},
+        {"when": "i2=1", "addLink": "continuedInPartBy"},
+        {"when": "i2=2", "addLink": "succeededBy"},
+        {"when": "i2=3", "addLink": "succeededBy"},
+        {"when": "i2=4", "addLink": "absorbedBy"},
+        {"when": "i2=5", "addLink": "absorbedBy"},
+        {"when": "i2=6", "addLink": "splitInto"},
+        {"when": "i2=7", "addLink": "mergedToForm"},
+        {"when": "i2=8", "addLink": "continuedBy"},
+        {"when": "i2=null", "addLink": "succeededBy"}
+        ],
+      "resourceType": "Work",
     },
     "786": {
+      "NOTE": "record-count:38",
       "aboutEntity": "?record",
       "inherit": "772",
       "addLink": "source",
