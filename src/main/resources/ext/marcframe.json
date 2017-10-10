@@ -2582,7 +2582,6 @@
     "018": {"NOTE:record-count": 0, "ignored": true},
 
     "020": {
-      "aboutEntity": "?work",
       "include": ["identifier"],
       "resourceType": "ISBN",
       "$c": {"property": "acquisitionTerms"},
@@ -2673,6 +2672,7 @@
     },
 
     "022": {
+      "aboutEntity": "?work",
       "include": ["identifier"],
       "resourceType": "ISSN",
       "i1": {
