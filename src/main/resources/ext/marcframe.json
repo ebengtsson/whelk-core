@@ -2582,6 +2582,7 @@
     "018": {"NOTE:record-count": 0, "ignored": true},
 
     "020": {
+      "aboutEntity": "?work",
       "include": ["identifier"],
       "resourceType": "ISBN",
       "$c": {"property": "acquisitionTerms"},
@@ -3742,7 +3743,7 @@
     },
 
     "222": {
-      "aboutEntity": "?thing",
+      "aboutEntity": "?work",
       "NOTE:domainIncludes": "Serial/Periodical",
       "addLink": "hasTitle",
       "embedded": true,
@@ -6076,10 +6077,10 @@
     "754": {},
     "755": {},
 
-    "760": {"NOTE:domainIncludes": "Serial", "inherit": "772", "addLink": "hasSeries", "resourceType": "Work"},
-    "762": {"NOTE:domainIncludes": "Serial", "inherit": "772", "addLink": "hasSubseries", "resourceType": "Work"},
-    "765": {"inherit": "772", "addLink": "translationOf"},
-    "767": {"inherit": "772", "addLink": "translation"},
+    "760": {"NOTE:domainIncludes": "Serial", "inherit": "772", "aboutEntity": "?work", "addLink": "hasSeries", "resourceType": "Work"},
+    "762": {"NOTE:domainIncludes": "Serial", "inherit": "772", "aboutEntity": "?work", "addLink": "hasSubseries", "resourceType": "Work"},
+    "765": {"inherit": "772", "addLink": "translationOf"}, 
+    "767": {"inherit": "772", "a"aboutEntity": "?work", ddLink": "translation"},
     "770": {"inherit": "772", "addLink": "supplement"},
     "772": {
       "addLink": "supplementTo",
@@ -6168,6 +6169,7 @@
     },
     "780": {
       "inherit": "772",
+      "aboutEntity": "?work",
       "TOOO:i1": {},
       "TOOO:i2": {},
       "match": [
@@ -6185,7 +6187,8 @@
     },
     "785": {
       "inherit": "772",
-       "match": [
+      "aboutEntity": "?work",
+      "match": [
         {"when": "i2=0", "addLink": "continuedBy"},
         {"when": "i2=1", "addLink": "continuedInPartBy"},
         {"when": "i2=2", "addLink": "succeededBy"},
