@@ -6109,7 +6109,7 @@
     "760": {"NOTE:domainIncludes": "Serial", "inherit": "772", "aboutEntity": "?work", "addLink": "hasSeries", "resourceType": "Work"},
     "762": {"NOTE:domainIncludes": "Serial", "inherit": "772", "aboutEntity": "?work", "addLink": "hasSubseries", "resourceType": "Work"},
     "765": {"inherit": "772", "addLink": "translationOf"}, 
-    "767": {"inherit": "772", "a"aboutEntity": "?work", ddLink": "translation"},
+    "767": {"inherit": "772", "aboutEntity": "?work", "addLink": "translation"},
     "770": {"inherit": "772", "addLink": "supplement"},
     "772": {
       "addLink": "supplementTo",
@@ -6204,13 +6204,13 @@
       "match": [
         {"when": "i2=0", "addLink": "continues"},
         {"when": "i2=1", "addLink": "continuesInPart"},
-        {"when": "i2=2", "addLink": "precededBy", "TODO": "need of narrower term to ensure proper match on revert"},
-        {"when": "i2=3", "addLink": "precededBy", "TODO": "need of narrower term to ensure proper match on revert"},
-        {"when": "i2=4", "addLink": "mergerOf"},
-        {"when": "i2=5", "addLink": "absorbed", "TODO": "need of narrower term to ensure proper match on revert"},
-        {"when": "i2=6", "addLink": "absorbed", "TODO": "need of narrower term to ensure proper match on revert"},
-        {"when": "i2=7", "addLink": "separatedFrom"},
-        {"when": "i2=null", "addLink": "precededBy", "TODO": "need of narrower term to ensure proper match on revert"}
+        {"when": "i2=2", "addLink": "precededBy"},
+        {"when": "i2=3", "addLink": "precededBy", "TODO": "need of narrower term (precededInPartBy) to ensure proper match on revert"},
+        {"when": "i2=4", "addLink": "mergerOf"}
+        {"when": "i2=5", "addLink": "absorbed"},
+        {"when": "i2=6", "addLink": "absorbed", "TODO": "need of narrower term (absorbedInPart) to ensure proper match on revert"},
+        {"when": "i2=7", "addLink": "separatedFrom"}
+        {"when": "i2=null", "addLink": "continues", "TODO": "ignoreOnRevertInFavourOf": "12=0"}
         ],
       "resourceType": "Work",
     },
@@ -6218,16 +6218,16 @@
       "inherit": "772",
       "aboutEntity": "?work",
       "match": [
-        {"when": "i2=0", "addLink": "continuedBy", "TODO": "need of narrower term to ensure proper match on revert"},
+        {"when": "i2=0", "addLink": "continuedBy"},
         {"when": "i2=1", "addLink": "continuedInPartBy"},
-        {"when": "i2=2", "addLink": "succeededBy", "TODO": "need of narrower term to ensure proper match on revert"},
-        {"when": "i2=3", "addLink": "succeededBy", "TODO": "need of narrower term to ensure proper match on revert"},
-        {"when": "i2=4", "addLink": "absorbedBy", "TODO": "need of narrower term to ensure proper match on revert"},
-        {"when": "i2=5", "addLink": "absorbedBy", "TODO": "need of narrower term to ensure proper match on revert"},
+        {"when": "i2=2", "addLink": "succeededBy"},
+        {"when": "i2=3", "addLink": "succeededBy", "TODO": "need of narrower term (succeededInPartBy) to ensure proper match on revert"},
+        {"when": "i2=4", "addLink": "absorbedBy"},
+        {"when": "i2=5", "addLink": "absorbedBy", "TODO": "need of narrower term (absorbedInPartBy) to ensure proper match on revert"},
         {"when": "i2=6", "addLink": "splitInto"},
         {"when": "i2=7", "addLink": "mergedToForm"},
-        {"when": "i2=8", "addLink": "continuedBy", "TODO": "need of narrower term to ensure proper match on revert"},
-        {"when": "i2=null", "addLink": "succeededBy", "TODO": "need of narrower term to ensure proper match on revert"}
+        {"when": "i2=8", "addLink": "continuedBy", "TODO": "need of narrower term (changedBackTo) to ensure proper match on revert"},
+        {"when": "i2=null", "addLink": "continuedBy", "TODO": "ignoreOnRevertInFavourOf": "12=0"}
         ],
       "resourceType": "Work",
     },
