@@ -4392,27 +4392,56 @@
     "411": {},
 
     "440": {
-      "TODO:ignoreOnRevertInFavourOf": "490 or 773 or 830? See also mapping for 240",
+      "aboutEntity": "?instance",
+      "match": [
+        {
+        "when": "NOTE:": "First iteration - to 490"
+        },
+        {"TODO:ignoreOnRevertInFavourOf": "490. See also mapping for 240?"},
+      
+      "addLink": "seriesStatement",
+      "embedded": true,
+      "resourceType": "SeriesStatement",
+      "i2": {"ignored": true},
+      "$a": {"property": "seriesStatement"},
+      "$n": {"NOTE": "concatenate with $a, keep punctuation and order of repeating $n $p"},
+      "$p": {"NOTE": "concatenate with $a, keep punctuation and order of repeating $n $p"},
+      "$v": {"property": "seriesEnumeration"},
+      "$w": {"addProperty": "bibliographicRecordControlNumber"},
+      "$x": {"property": "issn"},
+      "$0": {"addLink": "identifiedBy", "property": "value"}
+       },
+       {
+        "when": "NOTE:": "Second iteration - to 830"
+        },
+        {"TODO:ignoreOnRevertInFavourOf": "830"},
+       
       "addLink": "hasSeries",
       "embedded": true,
       "resourceType": "Serial",
-      "TOOO:i2": {},
+      "TOOO:i2": {"NOTE": "keep indicator value"},
       "$a": {"property": "title", "punctuationChars": ".,=;"},
-      "$0": {"addLink": "identifiedBy", "property": "value"},
-      "$n": {"addProperty": "numberOfPartOfAWork"},
-      "$p": {"addProperty": "nameOfPartOfAWork", "punctuationChars": ".,=;"},
-      "$w": {"addProperty": "bibliographicRecordControlNumber"},
+      "$n": {"addProperty": "partNumber"},
+      "$p": {"addProperty": "partName", "punctuationChars": ".,=;"},
       "$v": {"property": "seriesEnumeration"},
-      "$x": {"property": "issn", "punctuationChars": ".,=;"}
-    },
+      "$w": {"addProperty": "bibliographicRecordControlNumber"},
+      "$x": {"property": "issn", "punctuationChars": ".,=;"},
+      "$0": {"addLink": "identifiedBy", "property": "value"},
+       ],
+      },
     "490": {
-      "inherit": "440",
-      "TOOO:i1": {},
+      "addLink": "seriesStatement",
+      "embedded": true,
+      "resourceType": "SeriesStatement",
+      "i1": {"ignored": true},
       "i2": null,
-      "TODO:ignoreOnRevertInFavourOf": "773?",
-      "$l": {"link": "callno", "resourceType": "Concept", "property": "code"}
-    },
-
+      "$a": {"property": "seriesStatement"},
+      "$l": {"link": "callno", "resourceType": "Concept", "property": "code", "TODO:ignored": "true???"},
+      "$v": {"property": "seriesEnumeration"},
+      "$w": {"addProperty": "bibliographicRecordControlNumber"},
+      "$x": {"property": "issn"},
+      "$0": {"addLink": "identifiedBy", "property": "value"}
+     },
     "500": {
       "$a": {"aboutEntity": "?thing", "addLink": "hasNote", "resourceType": "Note", "property": "label"}},
     "501": {},
@@ -6240,9 +6269,9 @@
     "810": {},
     "811": {},
     "830": {
-      "addLink": "isPartOf", "resourceType": "Serial",
+      "addLink": "hasSeries", "resourceType": "Serial",
       "TODO:i2": {},
-      "$a": {"property": "uniformTitle"},
+      "$a": {"property": "title"},
       "$d": {"addProperty": "date"},
       "$v": {"property": "seriesEnumeration"},
       "$x": {"property": "issn", "punctuationChars": ".,=;"},
