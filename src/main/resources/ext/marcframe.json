@@ -4390,35 +4390,13 @@
     "400": {},
     "410": {},
     "411": {},
-
+    
     "440": {
       "aboutEntity": "?instance",
-      "match": [
-        {
-        "when": "NOTE:": "First iteration - to 490"
-        },
-        {"TODO:ignoreOnRevertInFavourOf": "490. See also mapping for 240?"},
-      
-      "addLink": "seriesStatement",
-      "embedded": true,
-      "resourceType": "SeriesStatement",
-      "i2": {"ignored": true},
-      "$a": {"property": "seriesStatement"},
-      "$n": {"NOTE": "concatenate with $a, keep punctuation and order of repeating $n $p"},
-      "$p": {"NOTE": "concatenate with $a, keep punctuation and order of repeating $n $p"},
-      "$v": {"property": "seriesEnumeration"},
-      "$w": {"addProperty": "bibliographicRecordControlNumber"},
-      "$x": {"property": "issn"},
-      "$0": {"addLink": "identifiedBy", "property": "value"}
-       },
-       {
-        "when": "NOTE:": "Second iteration - to 830"
-        },
-        {"TODO:ignoreOnRevertInFavourOf": "830"},
-       
+      "ignoreOnRevertInFavourOf": "830",
       "addLink": "hasSeries",
-      "embedded": true,
       "resourceType": "Serial",
+      "embedded": true,
       "TOOO:i2": {"NOTE": "keep indicator value"},
       "$a": {"property": "title", "punctuationChars": ".,=;"},
       "$n": {"addProperty": "partNumber"},
@@ -4426,9 +4404,8 @@
       "$v": {"property": "seriesEnumeration"},
       "$w": {"addProperty": "bibliographicRecordControlNumber"},
       "$x": {"property": "issn", "punctuationChars": ".,=;"},
-      "$0": {"addLink": "identifiedBy", "property": "value"},
-       ],
-      },
+      "$0": {"addLink": "identifiedBy", "property": "value"
+      }, 
     "490": {
       "addLink": "seriesStatement",
       "embedded": true,
