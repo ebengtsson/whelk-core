@@ -6187,7 +6187,7 @@
         {"when": "i2=5", "addLink": "absorbed"},
         {"when": "i2=6", "addLink": "absorbed", "TODO": "need of narrower term (absorbedInPart) to ensure proper match on revert"},
         {"when": "i2=7", "addLink": "separatedFrom"}
-        {"when": "i2=null", "addLink": "continues", "TODO": "ignoreOnRevertInFavourOf": "12=0"}
+        {"when": "i2=null", "addLink": "continues", "TODO: ignoreOnRevertInFavourOf": "12=0"}
         ],
       "resourceType": "Work",
     },
@@ -6204,7 +6204,7 @@
         {"when": "i2=6", "addLink": "splitInto"},
         {"when": "i2=7", "addLink": "mergedToForm"},
         {"when": "i2=8", "addLink": "continuedBy", "TODO": "need of narrower term (changedBackTo) to ensure proper match on revert"},
-        {"when": "i2=null", "addLink": "continuedBy", "TODO": "ignoreOnRevertInFavourOf": "12=0"}
+        {"when": "i2=null", "addLink": "continuedBy", "TODO: ignoreOnRevertInFavourOf": "12=0"}
         ],
       "resourceType": "Work",
     },
